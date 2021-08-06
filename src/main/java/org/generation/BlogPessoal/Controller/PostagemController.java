@@ -5,7 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.generation.BlogPessoal.Model.Postagem;
-import org.generation.BlogPessoal.Reposity.PostagemRepositorio;
+import org.generation.BlogPessoal.Repository.PostagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PostagemController {
 	
 	@Autowired
-	private PostagemRepositorio repository;
+	private PostagemRepository repository;
 	
 	@GetMapping
 	public ResponseEntity <List<Postagem>> GetAll() {
